@@ -1,17 +1,8 @@
-let num = Number(prompt("Introduzca su numero: "))
+alert("Introduzca los siguientes valores para saber el voltaje de la corriente.");
 
-function par() {
-    return (num % 2) == 0
-}
+resistencia = Number(prompt("Cuantos ohmios posee su resistencia?"));
+corriente = Number(prompt("Cuantos amperios tiene de corriente?"));
 
-if (par(num)){
-    if (num >= 10){
-        alert("Su numero es par y mayor a 10")
-    }
-    if (num < 10){
-        alert("Su numero es par y menor a 10")
-    }
-}
-else {
-    alert("Su numero es impar")
-}
+voltaje = (resistencia * corriente);
+
+alert(`El voltaje de su circuito es de ${voltaje} V`);
