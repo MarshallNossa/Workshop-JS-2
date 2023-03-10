@@ -1,8 +1,10 @@
-alert("Introduzca los siguientes valores para saber el voltaje de la corriente.");
+let nombres = []
+let edades = []
 
-resistencia = Number(prompt("Cuantos ohmios posee su resistencia?"));
-corriente = Number(prompt("Cuantos amperios tiene de corriente?"));
+for (let i = 0; i < 3; i++) {
+    nombres.unshift(prompt(`Introduzca el nombre # ${i}`))
+    edades.unshift(Number(prompt(`Introduzca la edad # ${i}`)))
+}
 
-voltaje = (resistencia * corriente);
-
-alert(`El voltaje de su circuito es de ${voltaje} V`);
+x = edades.indexOf(Math.max(...edades))
+alert(`La persona com mayor edad es ${nombres[x]}, y su edad es ${edades[x]}`)
