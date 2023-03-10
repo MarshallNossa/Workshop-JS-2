@@ -1,10 +1,9 @@
-let nombres = []
-let edades = []
+num1 = Number(prompt("Digite el numero 1"));
+num2 = Number(prompt("Digite el numero 2"));
 
-for (let i = 0; i < 3; i++) {
-    nombres.unshift(prompt(`Introduzca el nombre # ${i}`))
-    edades.unshift(Number(prompt(`Introduzca la edad # ${i}`)))
+if (num1 > num2){
+    alert(`La suma de tus numeros es de ${num1 + num2} \n Y su resta da ${num1 - num2}`)
 }
-
-x = edades.indexOf(Math.max(...edades))
-alert(`La persona com mayor edad es ${nombres[x]}, y su edad es ${edades[x]}`)
+else{
+    alert(`La multiplicacion de tus numeros es de ${num1 * num2} \n Y su division da ${num1 / num2}`)
+}
