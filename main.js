@@ -1,8 +1,17 @@
-ladoCuadrado = Number(prompt("Cual es la medida de uno de los lados del cuadrado en centimetros?:"));
+let atletas = [];
+let saltos = [];
 
-alert(`El perimetro de su cuadrado es de ${ladoCuadrado * 4} centimetros.`);
+a = Number(prompt("Cuantos atletas desea ingresar?:"))
 
-baseRectangulo = Number(prompt("Cual es la base del rectangulo en centimetros?:"));
-alturaRectangulo = Number(prompt("Cual es la altura del rectangulo en centimetros?"))
+for (let i = 0; i < a; i++) {
+        atletas.unshift(prompt(`Ingrese el nombre del atleta ${i}:`));
+        saltos.unshift(Number(prompt(`Digite la distacia del salto en metros del atleta ${i}:`)));
+}
 
-alert(`El area del rectangulo especificado es de ${baseRectangulo * alturaRectangulo} centimetros.`)
+x = saltos.indexOf(Math.max(...saltos));
+
+alert(`El atleta ${atletas[x]} ha obtenido la medalla de oro con un salto de ${saltos[x]} metros`)
+
+if (saltos[x]>15.50) {
+    alert(`Felicitaciones ${atletas[x]}, haz roto el record con un salto de ${saltos[x]} metros, obtuviste una recompensa de 500 millones de pesos!!!`)
+}
