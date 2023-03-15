@@ -1,9 +1,28 @@
-num1 = Number(prompt("Digite el numero 1"));
-num2 = Number(prompt("Digite el numero 2"));
+let nombre = [];
+let nota = [];
+let mujeres = [];
+let hombres = [];
 
-if (num1 > num2){
-    alert(`La suma de tus numeros es de ${num1 + num2} \n Y su resta da ${num1 - num2}`)
+estudiantes = Number(prompt("Cuantos estudiantes desea ingresar?: "));
+
+for (let i = 1; i < estudiantes + 1; i++) {
+    nombre.unshift(prompt(`Introduzca el nombre del estudiante #${i}:`));
+    nota.unshift(Number(prompt(`Digite la nota definitiva del estudiante #${i}`)));
+    sexo = Number(prompt(`El estudiante #${i} es: \n 1.Masculino \n 2.Femenino`));
+    if (sexo == 1) {
+        hombres.unshift(1);
+    }
+    else if (sexo == 2) {
+        mujeres.unshift(1);
+    }
+    else {
+        alert("Introduzca un valor valido");
+    }
 }
-else{
-    alert(`La multiplicacion de tus numeros es de ${num1 * num2} \n Y su division da ${num1 / num2}`)
-}
+
+x = nota.indexOf(Math.max(...nota));
+y = nota.indexOf(Math.min(...nota));
+
+alert(`El estudiante ${nombre[x]} sacó la mejor nota que es de ${nota[x]}, y el estudiante ${nombre[y]} sacó la nota mas baja que es de ${nota[y]}.`)
+
+alert(`Se introdujeron ${(mujeres.length)} mujeres y ${(hombres.length)} hombres.`)
