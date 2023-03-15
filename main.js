@@ -1,17 +1,15 @@
-let atletas = [];
-let saltos = [];
+const a  = [];
 
-a = Number(prompt("Cuantos atletas desea ingresar?:"))
+ x = true;
 
-for (let i = 0; i < a; i++) {
-        atletas.unshift(prompt(`Ingrese el nombre del atleta ${i}:`));
-        saltos.unshift(Number(prompt(`Digite la distacia del salto en metros del atleta ${i}:`)));
+while (x !== 0) {
+    a.unshift(Number(prompt("Digite su numero:")));
+    x = Number(prompt("Si no desea ingresar mas numeros digite 0"));
 }
 
-x = saltos.indexOf(Math.max(...saltos));
+let sum = Object.values(a).reduce((total, val) => total + val);
+let mayor = a.indexOf(Math.max(...a));
+let menor = a.indexOf(Math.min(...a));
+let promedio = (sum / (a.length));
 
-alert(`El atleta ${atletas[x]} ha obtenido la medalla de oro con un salto de ${saltos[x]} metros`)
-
-if (saltos[x]>15.50) {
-    alert(`Felicitaciones ${atletas[x]}, haz roto el record con un salto de ${saltos[x]} metros, obtuviste una recompensa de 500 millones de pesos!!!`)
-}
+alert(`La sumatoria de los datos registrados es de ${sum}, su promedio es ${promedio}, el numero mayor fue ${a[mayor]} y el numero menor fue ${a[menor]}`)
