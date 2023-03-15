@@ -1,7 +1,8 @@
-producto = prompt("Introduzca el nombre del articulo:");
-precio = Number(prompt("Introduzca el precio del articulo:"));
-cantidad = Number(prompt("Introduzca la cantidad de productos que lleva:"));
+ladoCuadrado = Number(prompt("Cual es la medida de uno de los lados del cuadrado en centimetros?:"));
 
-x = (precio * cantidad);
+alert(`El perimetro de su cuadrado es de ${ladoCuadrado * 4} centimetros.`);
 
-alert(`Articulo / Precio / Cantidad / Total \n${producto} / ${precio} / ${cantidad} / ${x}`)
+baseRectangulo = Number(prompt("Cual es la base del rectangulo en centimetros?:"));
+alturaRectangulo = Number(prompt("Cual es la altura del rectangulo en centimetros?"))
+
+alert(`El area del rectangulo especificado es de ${baseRectangulo * alturaRectangulo} centimetros.`)
